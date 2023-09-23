@@ -1,5 +1,6 @@
 //Display list of purchases
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 import { GetAccountInfoService } from '../get-account-info.service';
 import { Transaction } from '../Transaction';
 @Component({
@@ -17,7 +18,8 @@ export class DisplayPurchasesComponent {
 
   }
 
-  constructor(private getter:GetAccountInfoService){}
+
+  constructor(private getter:GetAccountInfoService,   private location: Location){}
 
   getPurchaseData(){
     this.getter.getData().subscribe( (accData) => {
@@ -47,5 +49,8 @@ export class DisplayPurchasesComponent {
   
     } );
   }
-
+  //Go back
+  goBack(): void {
+    this.location.back();
+  }
 }
