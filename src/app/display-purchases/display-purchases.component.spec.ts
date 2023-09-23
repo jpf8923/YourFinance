@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DisplayPurchasesComponent } from './display-purchases.component';
 
 describe('DisplayPurchasesComponent', () => {
