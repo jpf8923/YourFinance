@@ -7,13 +7,16 @@ def getRandomAccountData():
     pass
 
 # Returns Account information from an Account ID.
+# Accounts are Unique, only one ID per person  
 def getAccountFromID(account_id):
     file = open("data/Bank_Account_Data.csv")
     csvReader = csv.reader(file)
 
     for row in csvReader:
         if (row[0] == account_id):
+            file.close()
             return row
+    file.close()
     return "Couldn't find your Account ID! Try A00975 or similar"
 
 def getTransactionsFromAccountID(account_id):
