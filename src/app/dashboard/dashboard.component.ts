@@ -13,7 +13,16 @@ import { BrowserModule } from '@angular/platform-browser';
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
+
+
 export class DashboardComponent implements OnInit {
+
+  @NgModule({
+    imports: [
+        CommonModule
+    ]
+})
+    
   purchases: Transaction[] = [];
   tData: any;
 
