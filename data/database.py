@@ -1,8 +1,6 @@
 import csv
 
 # CSV Files.
-bankAccountDataFile = open("data/Bank_Account_Data.csv")
-bankTransactionDataFile = open("data/Bank_Transacation_Data.csv")
 bankCustomerDataFile = open("data/Bank_Customer_Data.csv")
 
 def getRandomAccountData():
@@ -10,8 +8,8 @@ def getRandomAccountData():
 
 # Returns Account information from an Account ID.
 def getAccountFromID(account_id):
-    
-    csvReader = csv.reader(bankAccountDataFile)
+    file = open("data/Bank_Account_Data.csv")
+    csvReader = csv.reader(file)
 
     for row in csvReader:
         if (row[0] == account_id):
@@ -19,7 +17,10 @@ def getAccountFromID(account_id):
     return "Couldn't find your Account ID! Try A00975 or similar"
 
 def getTransactionsFromAccountID(account_id):
-    csvReader = csv.reader(bankTransactionDataFile)
+    file = open("data/Bank_Transacation_Data.csv")
+
+
+    csvReader = csv.reader(file)
 
     transactions = []
     
@@ -27,9 +28,8 @@ def getTransactionsFromAccountID(account_id):
 
         if (row[1] == account_id):
             transactions += [row]
-            return transactions
-    print(transactions)
+
     if (len(transactions) == 0):
-        return 'Transactions Empty! Try A00351 or similar'
+        return 'Transactions Empty! Try A00351 or similar.\n Maybe restart the python script as well.'
 
     return transactions
