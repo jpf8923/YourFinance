@@ -1,5 +1,5 @@
-import { purchaseData } from './purchaseData'
+import { Transaction } from './Transaction'
 export interface accountData{
     accountName: string;
-    purchaseList: purchaseData[];
+    transactionHistory: Transaction[];
 }
