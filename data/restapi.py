@@ -8,6 +8,8 @@ app = Flask(__name__)
 cors = CORS(app)
 
 
+
+
 @app.route("/")
 def defaultPage():
     return '<h1 style="font-size:50px;">You are on the default Bank Data API Page </h1>' \

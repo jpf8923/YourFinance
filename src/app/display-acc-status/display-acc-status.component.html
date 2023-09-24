@@ -1,4 +1,8 @@
 <p>display-acc-status works!</p>
 
 <button (click)="getTransactions()">Get Transactions</button>
-<div>{{ transactionData }}</div>
+<a *ngFor="let t of transactions">
+    <div>{{ t }}</div>
+<script>
+    
+</script>
