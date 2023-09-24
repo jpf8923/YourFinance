@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

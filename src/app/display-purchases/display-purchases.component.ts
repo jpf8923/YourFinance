@@ -5,6 +5,7 @@ import { GetAccountInfoService } from '../get-account-info.service';
 import { Transaction } from '../Transaction';
 import { ReadVarExpr } from '@angular/compiler';
 
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-display-purchases',
@@ -14,6 +15,8 @@ import { ReadVarExpr } from '@angular/compiler';
 export class DisplayPurchasesComponent {
   pList?: Transaction[];
 
+  transactionData: any;
+
 
 
 
@@ -22,7 +25,7 @@ export class DisplayPurchasesComponent {
   }
 
 
-  constructor(private getter:GetAccountInfoService,   private location: Location){}
+  constructor(private getter:GetAccountInfoService,   private location: Location, private http: HttpClient){}
 
   getPurchaseData(){
 
@@ -54,6 +57,24 @@ export class DisplayPurchasesComponent {
   
     } );
   }
+
+
+
+  getTransactions() {
+    const url = 'http://127.0.0.1:5000/transactions/A00351';
+
+    this.http.get(url).subscribe(
+      (data: any) => {
+        console.log(url)
+        this.transactionData = data;
+        console.log(data); // Print the data to the console
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
+
   //Go back
   goBack(): void {
     this.location.back();
