@@ -1,6 +1,27 @@
 <h2>Purchases</h2>
 <div class="heroes-menu">
-  <a *ngFor="let pur of purchases">
-    HELLO
-  </a>
+  <!-- <button (click)="getTransactions()">TransactionButton</button><a> {{ purchases }} </a>  -->
+</div>
+
+<div>
+  <h2>Transaction History</h2>
+  <!-- <button (click)="getTransactions()">Fetch Data</button> -->
+  <table>
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Account ID</th>
+        <th>Transaction Date</th>
+        <!-- Add other table headers for additional properties -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of purchases">
+        <td>{{ transaction.transaction_id }}</td>
+        <td>{{ transaction.account_id }}</td>
+        <td>{{ transaction.transaction_date }}</td>
+        <!-- Add additional table cells for other properties -->
+      </tr>
+    </tbody>
+  </table>
 </div>

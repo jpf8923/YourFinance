@@ -10,6 +10,7 @@ export interface Transaction {
     transaction_id: number;
     account_id: String;
     transaction_date: String;
+    transaction_media: String;
     transaction_type: String;
     transaction_amount: number;
 }
