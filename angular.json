@@ -22,7 +22,10 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "Bank_Account_Data.csv" ,
+                "input": "./",
+                "output": "./assets/"}
             ],
             "styles": [
               "src/styles.css"

@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     
   ],
   providers: [],
