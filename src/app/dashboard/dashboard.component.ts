@@ -3,7 +3,6 @@ import { Transaction } from '../Transaction';
 import { GetAccountInfoService } from '../get-account-info.service';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -15,13 +14,9 @@ import { CommonModule } from '@angular/common';
 
 export class DashboardComponent implements OnInit {
 
-  @NgModule({
-    imports: [
-        CommonModule
-    ]
-})
-    
+  
   purchases: Transaction[] = [];
+  accountID?: String;
   tData: any;
 
   constructor(private service: GetAccountInfoService, private http: HttpClient, private forms: FormsModule) { }
@@ -50,7 +45,7 @@ export class DashboardComponent implements OnInit {
         transaction_amount: item[5],
       }));
       
-      
+      this.accountID = this.purchases[0]["account_id"];
     }, error => {
       console.error('Error: ' + error)
     })

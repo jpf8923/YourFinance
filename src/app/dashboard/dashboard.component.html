@@ -1,26 +1,21 @@
-<h2>Purchases</h2>
-<div class="heroes-menu">
-  <!-- <button (click)="getTransactions()">TransactionButton</button><a> {{ purchases }} </a>  -->
-</div>
+<h2>Transaction History [{{ accountID }}]</h2>
 
 <div>
-  <h2>Transaction History</h2>
-  <!-- <button (click)="getTransactions()">Fetch Data</button> -->
   <table>
     <thead>
       <tr>
         <th>Transaction ID</th>
-        <th>Account ID</th>
+        <th>Transaction Amount</th>
         <th>Transaction Date</th>
-        <!-- Add other table headers for additional properties -->
+        <th>transaction type</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let transaction of purchases">
+      <tr *ngFor="let transaction of purchases" class="data">
         <td>{{ transaction.transaction_id }}</td>
-        <td>{{ transaction.account_id }}</td>
+        <td>${{ transaction.transaction_amount }}</td>
+        <td>{{ transaction.transaction_media }}</td>
         <td>{{ transaction.transaction_date }}</td>
-        <!-- Add additional table cells for other properties -->
       </tr>
     </tbody>
   </table>
