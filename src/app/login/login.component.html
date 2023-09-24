@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale-1.0">
     <title>Login Here</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 <body>
     <div class="wrapper">
@@ -27,7 +28,7 @@
             <button [routerLink]="['/dashboard']" type="submit" class="btn">Login</button>
 
             <div class="register-link">
-                <p>Don't have an account? <a
+                <p>Don't have an account? <a routerLink="/signup"
                 href="#">Register</a></p>
             </div>
         </form>

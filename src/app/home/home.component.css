@@ -1,0 +1,39 @@
+.container div .wrapper{
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+}
+
+.container h2 {
+    text-align: center;
+    background: #c40233;
+    padding: 20px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+body {
+    background: #E1E1E8;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wrapper div {
+    background: #c40233;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+    border-style: solid;
+    border-color: black;
+}
+
+.extra {
+    color: white;
+    background: #c40233;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border-style: solid;
+    border-color: black;
+
+
+}
