@@ -17,11 +17,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 export class DashboardComponent implements OnInit {
 
-  @NgModule({
-    imports: [
-        CommonModule
-    ]
-})
     
   purchases: Transaction[] = [];
   tData: any;
