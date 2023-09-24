@@ -11,14 +11,12 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent,
     DashboardComponent
   ],
   imports: [
@@ -26,7 +24,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

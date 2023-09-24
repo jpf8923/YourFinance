@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Transaction } from '../Transaction';
 import { GetAccountInfoService } from '../get-account-info.service';
 import { HttpClient } from '@angular/common/http';
