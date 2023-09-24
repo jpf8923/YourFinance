@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DisplayAccStatusComponent } from './display-acc-status/display-acc-status.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'display-acc-status', component: DisplayAccStatusComponent },
   { path: 'login', component: LoginComponent},
   { path: 'navbar', component: NavbarComponent},
+  { path: 'signup', component: SignupComponent},
+
 
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
