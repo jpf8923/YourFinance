@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { purchaseData } from '../purchaseData';
+import { Transaction } from '../Transaction';
 import { GetAccountInfoService } from '../get-account-info.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { GetAccountInfoService } from '../get-account-info.service';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  purchases: purchaseData[] = [];
+  purchases: Transaction[] = [];
 
   constructor(private service: GetAccountInfoService) { }
 
@@ -18,6 +18,6 @@ export class DashboardComponent implements OnInit {
 
   getService(): void {
     this.service.getData()
-      .subscribe(accData => this.purchases = accData.purchaseList.slice(1, 5));
+      .subscribe(accData => this.purchases = accData.transactionHistory.slice(1, 5));
   }
 }

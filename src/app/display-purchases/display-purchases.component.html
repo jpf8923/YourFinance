@@ -1,6 +1,8 @@
-<h2>My Purchases</h2>
-<ul class="heroes">
+<h2>My Transactions</h2>
+<ul class="transactions">
   <li *ngFor="let p of pList">
-    <span class="badge">{{p.cost}}</span>
+    <span class="badge">{{p.transaction_id}} - {{p.account_id}} - {{p.transaction_amount}} </span>
   </li>
 </ul>
+
+<!--<button type="button" (click)="goBack()">go back</button>-->

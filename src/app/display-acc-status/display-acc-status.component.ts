@@ -21,3 +21,5 @@ export class DisplayAccStatusComponent {
     this.getter.getData().subscribe( (accData) => {this.accSelected = accData} );
   }
 }
+
+
