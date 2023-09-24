@@ -8,10 +8,10 @@ import { ReadVarExpr } from '@angular/compiler';
 
 @Component({
   selector: 'app-display-purchases',
-  templateUrl: './display-purchases.component.html',
-  styleUrls: ['./display-purchases.component.css']
+  templateUrl: './purchases.component.html',
+  styleUrls: ['./purchases.component.css']
 })
-export class DisplayPurchasesComponent {
+export class PurchasesComponent {
   pList?: Transaction[];
 
 
