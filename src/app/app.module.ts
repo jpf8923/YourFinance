@@ -17,7 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NavbarComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,

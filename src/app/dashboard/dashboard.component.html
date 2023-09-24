@@ -8,12 +8,12 @@
         <th>Transaction Amount</th>
         <th>Transaction Date</th>
         <th>transaction type</th>
-      </tr>
+      </tr> 
     </thead>
     <tbody>
       <tr *ngFor="let transaction of purchases" class="data">
         <td>{{ transaction.transaction_id }}</td>
-        <td>${{ transaction.transaction_amount }}</td>
+        <td>{{ transaction.transaction_amount | currency }}</td>
         <td>{{ transaction.transaction_media }}</td>
         <td>{{ transaction.transaction_date }}</td>
       </tr>
