@@ -1,9 +1,11 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Transaction } from '../Transaction';
 import { GetAccountInfoService } from '../get-account-info.service';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 
 @Component({
@@ -15,7 +17,7 @@ export class DashboardComponent implements OnInit {
   purchases: Transaction[] = [];
   tData: any;
 
-  constructor(private service: GetAccountInfoService, private http: HttpClient, private forms: FormsModule) { }
+  constructor(private service: GetAccountInfoService, private http: HttpClient, private forms: FormsModule, private common:CommonModule) { }
 
   ngOnInit(): void {
     this.getService();
