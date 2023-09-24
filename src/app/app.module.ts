@@ -2,30 +2,28 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { DisplayAccStatusComponent } from './display-acc-status/display-acc-status.component';
-import { DisplayGraphComponent } from './display-graph/display-graph.component';
-import { DisplayPurchasesComponent } from './display-purchases/display-purchases.component';
+import { GraphComponent } from './graph/graph.component';
+import { DisplayPurchasesComponent } from './purchases/purchases.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayAccStatusComponent,
-    DisplayGraphComponent,
+    GraphComponent,
     DisplayPurchasesComponent,
     LoginComponent,
-    HomeScreenComponent,
-    DashboardComponent
+    HomeComponent,
+    DashboardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
     
   ],
   providers: [],
