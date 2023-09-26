@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts'
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    PieChartComponent
   ],
   imports: [
     AppRoutingModule,
@@ -26,7 +29,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     FormsModule,
     CommonModule,
-    
+    CanvasJSAngularChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
